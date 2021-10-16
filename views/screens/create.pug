@@ -1,0 +1,10 @@
+extends ../layouts/main.pug
+
+block content 
+    form.home(action="/", method="get") 
+        button home
+    form.createpost(action="/createpost", method="post") 
+        input(type="text" name="name" required)
+        input(type="text" name="size" required)
+        input(type="text" name="price" required)
+        input(type="submit" value="작성")     

@@ -1,0 +1,12 @@
+extends ../layouts/main.pug
+
+block content 
+    form.create(action="/create", method="get") 
+        button create 
+    .homeBox
+        each drink in drinks
+            div 아름: #{drink.name}
+            div 사이즈: #{drink.size} cm
+            div 가격: #{drink.price} 원
+            div 작성일: #{drink.createdAt} 
+            div -----------------------------
