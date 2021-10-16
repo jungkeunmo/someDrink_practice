@@ -5,6 +5,8 @@
   display: flex;
   flex-direction: column;
   padding: 30px;
+
+  background-color: rgb(243, 243, 170);
 }
 
 .home button {

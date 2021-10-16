@@ -5,6 +5,8 @@
   display: flex;
   flex-direction: column;
   padding: 30px;
+
+  background-color: rgb(243, 243, 170);
 }
 
 .create button {
@@ -25,4 +27,13 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.footer {
+  width: 100%;
+  height: 300px;
+
+  bottom: 0;
+
+  background-color: #222;
 }
