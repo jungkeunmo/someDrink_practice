@@ -4,7 +4,7 @@ block content
     form.home(action="/", method="get") 
         button home
     form.createpost(action="/createpost", method="post") 
-        input(type="text" name="name" required)
-        input(type="text" name="size" required)
-        input(type="text" name="price" required)
+        input(type="text" name="name" placeholder="음료 이름을 입력해주세요..." required)
+        input(type="text" name="size" placeholder="크기를 입력해주세요..." required)
+        input(type="text" name="price" placeholder="가격을 입력해주세요..." required)
         input(type="submit" value="작성")     
