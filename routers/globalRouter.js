@@ -5,11 +5,11 @@ const router = express.Router();
 
 router.get("/", (req, res)=> {
     const selectQuery = `
-    SELECT	name,
-            size,
-            price,
-            createdAt
-      FROM  drinks;     
+        SELECT	name,
+                size,
+                price,
+                createdAt
+          FROM  drinks;     
     `;
     try {
         db.query(selectQuery, (err, drinks) => {
@@ -26,10 +26,10 @@ router.get("/create", (req, res) => {
 });
 
 router.post("/createpost", (req, res) => {
-    //console.log(req.body.name);
-    //console.log(req.body.size);
-    //console.log(req.body.price);
-;    const insertQuery = `
+    console.log(req.body.name);
+    console.log(req.body.size);
+    console.log(req.body.price);
+    const insertQuery = `
         INSERT	INTO drinks (
             name,
             size,
@@ -40,9 +40,7 @@ router.post("/createpost", (req, res) => {
             "${req.body.size}",
             ${req.body.price},
             now()
-        )
-        `;
-
+    )`;
     try {
         db.query(insertQuery, (error, drinks) => {
             if(error) {
